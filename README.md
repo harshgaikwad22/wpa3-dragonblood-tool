@@ -155,11 +155,11 @@ wpa3-dragonblood-tool/
 
 ## Demo Video
 
-[Link to demonstration video showing the tool in action]
+[Link to demonstration video showing the tool in action](https://github.com/harshgaikwad22/wpa3-dragonblood-tool/blob/main/demo/android-initial-association.ogv)
 
 ## Final Presentation
 
-[Link to final project presentation slides]
+[Link to final project presentation slides](https://docs.google.com/presentation/d/1fxDMufuLfV-Nut1ksWv9qYBddnnHtWG2zo0sAieZRTo/edit?usp=sharing)
 
 ## Contributors
 
