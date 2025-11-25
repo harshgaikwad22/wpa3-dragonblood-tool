@@ -1,5 +1,4 @@
-
-# Automated WPA3-Transition Downgrade Attack Tool 
+# Automated WPA3-Transition Downgrade Attack Tool
 
 ## Overview
 
@@ -30,12 +29,14 @@ This project implements an automated security testing tool that demonstrates the
 ## System Requirements
 
 ### Hardware
+
 - Wireless network interfaces (2 required):
   - One supporting monitor mode (for scanning)
   - One supporting AP mode (for rogue AP)
   - High-power adapters
 
 ### Software
+
 - **Operating System**: Kali Linux 2023.x or later (recommended)
 - **Dependencies**:
   - Python 3.8+
@@ -46,12 +47,14 @@ This project implements an automated security testing tool that demonstrates the
 ## Setup Instructions
 
 ### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/harshgaikwad22/wpa3-dragonblood-tool.git
 cd wpa3-dragonblood-tool
 ```
 
 ### 2. Install Dependencies
+
 ```bash
 # Update system
 sudo apt update && sudo apt upgrade -y
@@ -64,6 +67,7 @@ pip3 install scapy
 ```
 
 ### 3. Verify Interface Compatibility
+
 ```bash
 # Check available wireless interfaces
 iw dev
@@ -76,27 +80,32 @@ sudo airmon-ng start <interface>
 ## Usage
 
 ### Basic Usage
+
 ```bash
 sudo python3 main.py -m <interface in monitor mode> -r <interface in managed mode>
 ```
 
 ### Parameters
+
 - `-m, --monitor`: Monitor mode interface for scanning
 - `-r, --rogue`: Interface for rogue AP deployment
 
 ### Execution Flow
 
 1. **Discovery Phase** (60 seconds):
+
    - The tool scans for nearby Wi-Fi networks
    - Captures beacon frames and probe responses
    - Analyzes security configurations
 
 2. **Analysis Phase**:
+
    - Identifies WPA3-capable networks
    - Classifies as WPA3-only or transition mode
    - Displays vulnerable targets
 
 3. **Selection Phase**:
+
    - User selects target APs interactively
    - Shows detailed security information
 
@@ -106,6 +115,7 @@ sudo python3 main.py -m <interface in monitor mode> -r <interface in managed mod
    - Monitors for client associations and reassociations
 
 ### Example Output
+
 ```
 Found 3 target AP(s). Please select which ones to attack:
 ----------------------------------------------------------------------------------------------------
@@ -153,14 +163,14 @@ wpa3-dragonblood-tool/
 
 ## Contributors
 
-- **Your Name** - Project Lead & Developer
-  - Vulnerability research and tool development
-  - Wireless security analysis
-  - Attack methodology design
+- **Harshwardhan Gaikwad**
+- **Suyash Chaudhary**
+- **Devagya Yadav**
 
 ## Legal and Ethical Notice
 
 This tool is designed for:
+
 - Security researchers testing their own networks
 - Penetration testers with proper authorization
 - Educational purposes in controlled environments
@@ -173,4 +183,7 @@ This tool is designed for:
 - [Wi-Fi Alliance WPA3 Specification](https://www.wi-fi.org/discover-wi-fi/security)
 - [hostapd-mana Documentation](https://github.com/sensepost/hostapd-mana)
 - [Dragonshift](https://github.com/jabbaw0nky/DragonShift)
+
+```
+
 ```
