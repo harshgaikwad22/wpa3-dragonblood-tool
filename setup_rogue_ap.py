@@ -1,7 +1,6 @@
 import subprocess
 import time
 import os
-from colorama import Fore, Style
 
 def create_rogue_ap_config(folder_name, ap, managed_interface):
   # Creates a configuration file for hostapd-mana if stations are connected.
@@ -52,13 +51,13 @@ def setup_rogue_ap(config_file):
         
         # Check for handshake capture message
         if "Captured a WPA/2 handshake from" in output:
-          print(f"\n{Fore.GREEN}Handshake captured! Shutting down Rogue AP (hostapd-mana).{Style.RESET_ALL}")
+          print(f"\nHandshake captured! Shutting down Rogue AP (hostapd-mana).")
           process.terminate()
           break
       
       # Timeout after 10 minutes if no handshake captured
       if time.time() - start_time > 600:  # 10 minutes
-        print(f"\n{Fore.YELLOW}Timeout reached (10 minutes). No handshake captured. Stopping Rogue AP.{Style.RESET_ALL}")
+        print(f"\nTimeout reached (10 minutes). No handshake captured. Stopping Rogue AP.")
         process.terminate()
         break
     
